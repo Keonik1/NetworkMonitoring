@@ -1,0 +1,28 @@
+{
+    "index": {
+        "0": {
+            "hostname": "test.domain.ru",
+            "IPadd": "google.com",
+            "checking": "0",
+            "Description": "тест",
+            "past state": "online",
+            "currently state": "online"
+        },
+        "1": {
+            "hostname": "test.domain2.ru",
+            "IPadd": "127.0.0.1",
+            "checking": "0",
+            "Description": "тест2",
+            "past state": "online",
+            "currently state": "online"
+        },
+        "2": {
+            "hostname": "test.domain3.ru",
+            "IPadd": "google.commmm",
+            "checking": "0",
+            "Description": "тест2",
+            "past state": "online",
+            "currently state": "online"
+        }
+    }
+}
