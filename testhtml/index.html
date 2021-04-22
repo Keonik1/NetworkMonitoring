@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+</head>
+<style>
+    table
+    {
+        padding: 0px;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+    }
+    table td
+    {
+        padding: 20px;
+        border: 1px solid black;
+    }
+    table th
+    {
+        padding: 20px;
+        border: 1px solid rgb(0, 0, 0);
+    }
+</style>
+<body>
+
+    <div class="table" , id="devicesTable"></div>
+    <script>
+        var tableEl = document.querySelector('#devicesTable')
+        var NumbersOfDevices = 0
+        var colsIN = 6
+        $.getJSON('devices.json', function (devicesData) 
+        {
+            NumbersOfDevices = Object.keys(devicesData.index).length; //определение, сколько рядов создавать
+            createTable(tableEl, colsIN, NumbersOfDevices) //создание таблицы
+
+            $('table tr').each(function(row){
+                $(this).find('td').each(function(cell){
+                    //console.log(devicesData.index[String(row)])
+                    
+                    //console.log(value111)
+                    $(this).text()
+                });
+            });
+        });
+
+        //console.log(NumbersOfDevices);
+
+        function createTable(Name, cols, rows)
+        {
+            //создание таблицы
+            var table = document.createElement('table');
+            //создание заголовков колонок таблицы
+            let thValues = ["№", "Имя Хоста", "IP-адрес", "Состояние т.", "Состояние п.", "Время опроса", "Описание"]
+            for (i = 0; i< cols; i++) 
+            {
+                var th = document.createElement('th');
+                var vth = document.createTextNode(thValues[i]);
+                th.appendChild(vth)
+                table.appendChild(th)
+            }
+            //создание ячеек таблицы
+            for (var i = 0; i <= rows; i++)
+            {
+                var tr = document.createElement('tr');
+
+                for (var j = 0; j < cols; j++)
+                {
+                    var td = document.createElement('td');
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+            Name.appendChild(table);
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+<!--
+<script>
+    //var table = document.querySelector('table');
+    var html = "<table>"
+
+    $.getJSON('devices.json', function (devicesData) {
+        var NumbersOfDevices = Object.keys(devicesData.index).length;
+        var NumbersOfValues;
+        for (i = 0; i < NumbersOfDevices; i++) {
+            NumbersOfValues = Object.keys(devicesData.index[String(i)]).length;
+            $.each(devicesData, function(key, values)
+            {
+                html += '<tr>' + '<td>' + values[i] + '</td>' + '</tr>'
+            });
+            html += '</table>'
+        }
+        document.getElementById('devicesTable').innerHTML = html
+        //console.log(NumbersOfValues);
+    });
+</script>
+*/
+-->

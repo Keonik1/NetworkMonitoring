@@ -3,6 +3,7 @@ import constants
 import os
 import time
 #import AddDevices
+import datetime
 import json
 import sys
 
@@ -53,8 +54,8 @@ while True:
         print('Нет данных в json, заполните их через AddDevices.py или вручную в файле ' + PathDevicesData)
         sys.exit()
 
-    with open(PathDevicesData, 'r+', encoding=constants.Encoding) as File:   #открытие файла json с кодировкой utf
-        DevicesData = json.loads(File.read())                               #перенос данных из json в словарь; len(DevicesData["index"]) - определение количества данных (устройств)
+    with open(PathDevicesData, 'r+', encoding=constants.Encoding) as File:      #открытие файла json с кодировкой utf
+        DevicesData = json.loads(File.read())                                   #перенос данных из json в словарь; len(DevicesData["index"]) - определение количества данных (устройств)
         for i in (range(0, (len(DevicesData["index"])))):
             hostname = DevicesData["index"][str(i)]["hostname"]
             IPadd = DevicesData["index"][str(i)]["IPadd"]
@@ -64,7 +65,9 @@ while True:
             pastState = DevicesData["index"][str(i)]["currently state"]     #запись состояния, что сейчас для переноса его в прошлое
             DevicesData["index"][str(i)]["currently state"] = answerPing    #изменение текущего состояния
             DevicesData["index"][str(i)]["past state"] = pastState          #изменение прошлого состояния
-            
+            nowTime = datetime.datetime.now()
+            DevicesData["index"][str(i)]["currently time"] = nowTime.strftime("%H:%M:%S  %d.%m.%Y")
+
             checkStateCur = DevicesData["index"][str(i)]["currently state"]
             checkStatePast = DevicesData["index"][str(i)]["past state"]
 
@@ -78,4 +81,4 @@ while True:
         File.write(json.dumps(DevicesData, indent=constants.indent))        #запись файла json
         File.truncate()
 
-    time.sleep(constants.timeToPing)                                              #Подождать время и повторить проверку по новой
+    time.sleep(constants.timeToPing)                                        #Подождать время и повторить проверку по новой
