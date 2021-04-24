@@ -5,20 +5,19 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<link rel="stylesheet" href="styles/styles2.css">-->
+    <link rel="stylesheet" href="styles/styles.css">
+    
+    <meta http-equiv="refresh" content="15">    <!--в content=указывается задержка в секундах на обновление информации-->
 </head>
-<style>
-    table td
-    {
-        padding: 20px;
-        border: 1px solid black;
-    }
-    table th
-    {
-        padding: 20px;
-        border: 1px solid rgb(0, 0, 0);
-    }
-</style>
-<div class="table" id="devicesTable"></div>
+
+    
+<div class="table" id="devicesTable" width='100%' align="center">
+    <div class="table-title">
+        <h3>Состояние устройств</h3>
+    </div>
+    
+</div>
 <body>
     
     <script>
@@ -34,7 +33,7 @@
             //создание таблицы
             let cols = thValues.length;
             let rows = Object.keys(devicesData.index).length; //определение, сколько рядов создавать 
-            //console.log(rows)   
+            console.log(rows)   
             var Name = document.querySelector('#devicesTable');    
             var table = document.createElement('table');
 
@@ -67,10 +66,26 @@
 
                 td = document.createElement('td');
                 td.innerHTML = devicesData.index[i]['currently state'];
+                if (devicesData.index[i]['currently state'] == 'Online')    //назначение цвета состояния
+                {
+                    td.className = 'online';    
+                }
+                else
+                {
+                    td.className = 'offline';
+                }
                 tr.appendChild(td);
 
                 td = document.createElement('td');
                 td.innerHTML = devicesData.index[i]['past state'];
+                if (devicesData.index[i]['past state'] == 'Online')
+                {
+                    td.className = 'onlinepast';
+                }
+                else
+                {
+                    td.className = 'offlinepast';
+                }
                 tr.appendChild(td);
 
                 td = document.createElement('td');
@@ -86,11 +101,13 @@
             }
             Name.appendChild(table);
         }
+
         for (i=0; i <1; i++)
         {
             $.getJSON('devices.json', function (devicesData) 
             {
                 resultJson(devicesData);
+                
             });
         }
     </script>
