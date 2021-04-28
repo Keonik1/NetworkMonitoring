@@ -7,7 +7,7 @@
             "Description": "\u0442\u0435\u0441\u0442",
             "past state": "Online",
             "currently state": "Online",
-            "currently time": "08:42:20  28.04.2021"
+            "currently time": "15:04:28  28.04.2021"
         },
         "1": {
             "hostname": "test.domain2.ru",
@@ -16,7 +16,7 @@
             "Description": "\u0442\u0435\u0441\u04422",
             "past state": "Online",
             "currently state": "Online",
-            "currently time": "08:42:20  28.04.2021"
+            "currently time": "15:04:28  28.04.2021"
         },
         "2": {
             "hostname": "test.domain3.ru",
@@ -25,7 +25,7 @@
             "Description": "\u0442\u0435\u0441\u04422",
             "past state": "Offline",
             "currently state": "Offline",
-            "currently time": "08:42:20  28.04.2021"
+            "currently time": "15:04:28  28.04.2021"
         }
     }
 }
