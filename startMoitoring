@@ -1,0 +1,5 @@
+#!/bin/bash
+
+python3 Application.py &
+sleep 5
+python3 bot.py &

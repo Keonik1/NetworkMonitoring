@@ -31,12 +31,7 @@ def Pinging(IPaddF="127.0.0.1"):              #функция пинга
         answer = 'Offline'
     return answer
 
-#todo: сделать проверку наличия json, если его нет запросить данные на ввод
-#todo: ✓сделать try except✓, ДОДЕЛАТЬ!!!! чтобы можно даже было пинговать через hostname или избавиться от багов
-#todo: сделать в json еще 1 параметр, чтобы можно было проверять и по hostname и ip и оба (ip - 0, hostname - 1, оба - 2)
-#todo: добавить время пинга, и менять прошлое время, если изменилось состояние. Добавить в json 2 пункта, текущее и прошлое время
-
-
+print('Application.py запущен')
 while True:
     PathDevicesData = constants.devicesJson
     #проверка наличия данных в json или существование json
