@@ -1,5 +1,6 @@
 # NetworkMonitoring
 monitor devices using python and check their status on the site and via the discord bot
+
 eng:
 Program for monitoring network devices listed in the JSON file
 StartMonitoring - Bash script for running programs.Make it executable and run.
