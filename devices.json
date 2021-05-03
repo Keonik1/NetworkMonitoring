@@ -1,31 +1,36 @@
 {
     "index": {
         "0": {
-            "hostname": "test.domain.ru",
-            "IPadd": "google.com",
-            "checking": "0",
-            "Description": "\u0442\u0435\u0441\u0442",
-            "past state": "Online",
-            "currently state": "Offline",
-            "currently time": "15:25:16  28.04.2021"
-        },
-        "1": {
-            "hostname": "test.domain2.ru",
+            "hostname": "test.2.com",
             "IPadd": "127.0.0.1",
-            "checking": "0",
-            "Description": "\u0442\u0435\u0441\u04422",
-            "past state": "Online",
-            "currently state": "Offline",
-            "currently time": "15:25:16  28.04.2021"
-        },
-        "2": {
-            "hostname": "test.domain3.ru",
-            "IPadd": "google.commmmmmm",
-            "checking": "0",
-            "Description": "\u0442\u0435\u0441\u04422",
+            "Description": "\u0442\u0435\u0441\u0442",
             "past state": "Offline",
             "currently state": "Offline",
-            "currently time": "15:25:16  28.04.2021"
+            "currently time": "11:08:19  03.05.2021"
+        },
+        "1": {
+            "hostname": "test.3.com",
+            "IPadd": "128.0.0.1",
+            "Description": "\u0442\u0435\u0441\u0442 \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0438\u0435",
+            "past state": "Offline",
+            "currently state": "Offline",
+            "currently time": "11:11:21  03.05.2021"
+        },
+        "2": {
+            "hostname": "test.test.2",
+            "IPadd": "123.0.0.1",
+            "Description": "\u0442\u0435\u0441\u0442 \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0438\u0435 2",
+            "past state": "Offline",
+            "currently state": "Offline",
+            "currently time": "11:11:56  03.05.2021"
+        },
+        "3": {
+            "hostname": "dfs",
+            "IPadd": "dsf",
+            "Description": "dfs",
+            "past state": "Offline",
+            "currently state": "Offline",
+            "currently time": "11:12:28  03.05.2021"
         }
     }
 }

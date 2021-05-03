@@ -15,7 +15,7 @@ constants.py and botinfo.py (botinfo.copy) - Data Files
 
 devices.json - file with devices. Description can be written in human, and not through Unicode
 
-AddDevices.py - Data Entering the JSON file. ! So far not working.!
+AddDevices.py - Data Entering the JSON file.
 
 index.html + styles / styles.css - display information in the browser (you need a web server)
 
@@ -52,7 +52,7 @@ constants.py и botinfo.py (botinfo.copy) - файлы с данными
 
 devices.json   - файл с устройствами. Description можно писать по человечески, а не через unicode
 
-AddDevices.py  - занесение данных в json файл. !Пока что не работает.!
+AddDevices.py  - занесение данных в json файл. 
 
 index.html + styles/styles.css - отображение информации в браузере (нужен веб сервер)
 

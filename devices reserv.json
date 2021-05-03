@@ -1,0 +1,28 @@
+{
+    "index": {
+        "0": {
+            "hostname": "test.domain.ru",
+            "IPadd": "google.com",
+            "Description": "\u0442\u0435\u0441\u0442",
+            "past state": "Online",
+            "currently state": "Offline",
+            "currently time": "15:25:16  28.04.2021"
+        },
+        "1": {
+            "hostname": "test.domain2.ru",
+            "IPadd": "127.0.0.1",
+            "Description": "\u0442\u0435\u0441\u04422",
+            "past state": "Online",
+            "currently state": "Offline",
+            "currently time": "15:25:16  28.04.2021"
+        },
+        "2": {
+            "hostname": "test.domain3.ru",
+            "IPadd": "google.commmmmmm",
+            "Description": "\u0442\u0435\u0441\u04422",
+            "past state": "Offline",
+            "currently state": "Offline",
+            "currently time": "15:25:16  28.04.2021"
+        }
+    }
+}
