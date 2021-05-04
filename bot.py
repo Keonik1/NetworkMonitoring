@@ -37,7 +37,7 @@ async def backgroundMonitoring():
             lastCheckTime = JSONData["index"][str(0)]["currently time"]
             for i in range(0, (len(JSONData["index"]))):
                 if JSONData["index"][str(i)]["past state"] != JSONData["index"][str(i)]["currently state"]:
-                    print('Фоновая задача 5 включена')
+                    #print('Фоновая задача 5 включена')
                     AnswerState += f'''**Состояние устройства {i+1}:** 
 IP-адрес: {JSONData["index"][str(i)]["IPadd"]}
 Hostname: {JSONData["index"][str(i)]["hostname"]}
