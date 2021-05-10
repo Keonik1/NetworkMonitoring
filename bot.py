@@ -22,6 +22,7 @@ async def backgroundMonitoring():
     print('Фоновая задача включена')
     await client.wait_until_ready()         #дождаться включения бота
     channel = client.get_channel(botinfo.channelID)
+    LastCheckChannel = client.get_channel(botinfo.LastCheckChannelID)
     await channel.send('Бот запущен, для вызова справки написать "!помощь"')
     #print('Фоновая задача 2 включена')                 #для дебага
     while not client.is_closed():
@@ -57,8 +58,8 @@ Hostname: {JSONData["index"][str(i)]["hostname"]}
         if len(AnswerState) > 0:
             await channel.send(AnswerState)
         else:
-            if CountAnswers == 0:
-                await channel.send(f'Нет устройств изменивших состояние. Последнее время проверки: {lastCheckTime}')
+            if (CountAnswers == 0 and botinfo.SendLastCheck.lower() == 'on'):
+                await LastCheckChannel.send(f'Нет устройств изменивших состояние. Последнее время проверки: {lastCheckTime}')
 
         await asyncio.sleep(botinfo.timeToGetStatus)
 
