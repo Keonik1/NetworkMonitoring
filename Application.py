@@ -31,7 +31,7 @@ def Pinging(IPaddF="127.0.0.1"):              #функция пинга
         answer = 'Offline'
     return answer
 
-print('Application.py запущен')
+print('Application.py запущен!')
 while True:
     PathDevicesData = constants.devicesJson
     #проверка наличия данных в json или существование json
@@ -52,7 +52,7 @@ while True:
     with open(PathDevicesData, 'r+', encoding=constants.Encoding) as File:      #открытие файла json с кодировкой utf
         DevicesData = json.loads(File.read())                                   #перенос данных из json в словарь; len(DevicesData["index"]) - определение количества данных (устройств)
         for i in (range(0, (len(DevicesData["index"])))):
-            hostname = DevicesData["index"][str(i)]["hostname"]
+            #hostname = DevicesData["index"][str(i)]["hostname"]
             IPadd = DevicesData["index"][str(i)]["IPadd"]
 
             answerPing = Pinging(IPadd)

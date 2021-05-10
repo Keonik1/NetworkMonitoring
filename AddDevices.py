@@ -1,4 +1,4 @@
-#не работает. Doesnt work!
+
 import os
 import sys
 import json
