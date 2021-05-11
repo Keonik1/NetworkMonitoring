@@ -203,13 +203,13 @@ if os.path.exists(PathToJson) == True:
         try:
             getjson = json.loads(File.read())
             if len(getjson) == 0:
-                print('Нет данных в json, заполните их через AddDevices.py или вручную в файле ' + PathDevicesData)
+                print('Нет данных в json, заполните их через AddDevices.py или вручную в файле ' + PathToJson)
                 sys.exit()
         except Exception:
-            print('Нет данных в json или не удалось считать эти данные, заполните их через AddDevices.py или вручную в файле ' + PathDevicesData)
+            print('Нет данных в json или не удалось считать эти данные, заполните их через AddDevices.py или вручную в файле ' + PathToJson)
             sys.exit()
 else:
-    print('Нет данных в json, заполните их через AddDevices.py или вручную в файле ' + PathDevicesData)
+    print('Нет данных в json, заполните их через AddDevices.py или вручную в файле ' + PathToJson)
     sys.exit()
 client.loop.create_task(backgroundMonitoring())     #запуск фоновой задачи
 client.run(botinfo.BotToken)                        #запуск бота
