@@ -1,6 +1,4 @@
 /bot/botinfo.py
 botinfo.py
-/__pycache__/botinfo.cpython-39.pyc
-/__pycache__/botinfo.cpython-38.pyc
-__pycache__\constants.cpython-39.pyc
-\__pycache__\constants.cpython-39.pyc
+__pycache__/
+*.py[cod]
