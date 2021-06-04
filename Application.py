@@ -69,8 +69,8 @@ while True:
             if constants.displayView == 'on':                               #отображения пинга на консоли
                 print('Устройство ' + hostname + ' по адресу ' + IPadd + ' было ' + checkStatePast + ', а сейчас - ' + checkStateCur)
                 
-                if checkStateCur !=checkStatePast:
-                    print(hostname + ' по адресу ' + IPadd + ' изменило свое состояние на ' + checkStateCur)
+            if checkStateCur !=checkStatePast:
+                print(hostname + ' по адресу ' + IPadd + ' изменило свое состояние на ' + checkStateCur)
         
         File.seek(0)                                                        #очистка файла json
         File.write(json.dumps(DevicesData, indent=constants.indent))        #запись файла json
