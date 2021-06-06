@@ -125,8 +125,8 @@ async def all(ctx):
         JSONData = json.loads(FileJSON.read())
         for i in range(0, (len(JSONData["index"]))):
             answerStatus += f'''**Состояние устройства {i+1}:** 
-{JSONData["index"][str(i)]["IPadd"]}
-{JSONData["index"][str(i)]["hostname"]}
+IP-адрес: {JSONData["index"][str(i)]["IPadd"]}
+Hostname: {JSONData["index"][str(i)]["hostname"]}
 Прошлое состояние: __{JSONData["index"][str(i)]["past state"]}__
 Текущее состояние: __{JSONData["index"][str(i)]["currently state"]}__
 Время последнего опроса: {JSONData["index"][str(i)]["currently time"]}
@@ -162,8 +162,8 @@ def getstatus(TypeOfResponse, value):
             # ** - Жирный текст в дискорде
             # __ - подчеркнутый текст в дискорде 
                 answer = f'''**Запрошенное устройство имеет следующее состояние:** 
-{JSONData["index"][str(indexDev)]["IPadd"]}
-{JSONData["index"][str(indexDev)]["hostname"]}
+IP-адрес: {JSONData["index"][str(indexDev)]["IPadd"]}
+Hostname: {JSONData["index"][str(indexDev)]["hostname"]}
 Прошлое состояние: __{JSONData["index"][str(indexDev)]["past state"]}__
 Текущее состояние: __{JSONData["index"][str(indexDev)]["currently state"]}__
 Время последнего опроса: {JSONData["index"][str(indexDev)]["currently time"]}
@@ -184,8 +184,8 @@ def getstatus(TypeOfResponse, value):
             # ** - Жирный текст в дискорде
             # __ - подчеркнутый текст в дискорде
                 answer = f'''**Запрошенное устройство имеет следующее состояние:** 
-{JSONData["index"][str(indexDev)]["IPadd"]}
-{JSONData["index"][str(indexDev)]["hostname"]}
+IP-адрес: {JSONData["index"][str(indexDev)]["IPadd"]}
+Hostname: {JSONData["index"][str(indexDev)]["hostname"]}
 Прошлое состояние: __{JSONData["index"][str(indexDev)]["past state"]}__
 Текущее состояние: __{JSONData["index"][str(indexDev)]["currently state"]}__
 Время последнего опроса: {JSONData["index"][str(indexDev)]["currently time"]}
